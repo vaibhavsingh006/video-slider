@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video-slider</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .main {
+        position: relative;
+        margin: 0 25.1% 0 25%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .right-button {
+        position: fixed;
+        right: 0;
+        top: 50%;
+        background: gray;
+        border-radius: 50%;
+        color: black;
+        font-weight: 900;
+        z-index: 99;
+        padding: 20px 25px;
+        cursor: pointer;
+        /* pointer-events: none; */
+    }
+
+    .left-button {
+        position: fixed;
+        left: 0;
+        top: 50%;
+        background: gray;
+        border-radius: 50%;
+        color: black;
+        font-weight: 900;
+        padding: 20px 25px;
+        cursor: pointer;
+        z-index: 99;
+        /* pointer-events: all; */
+
+    }
+
+    .slider-box {
+        position: relative;
+        /* background: palevioletred; */
+        /* width: 196vw; */
+        display: flex;
+        /* align-items: center; */
+        height: 60%;
+        transition: all 0.8s;
+    }
+
+    .first-img {
+        display: flex;
+        /* width: 805px; */
+        /* width: 50.3pc; */
+        /* height: 100%; */
+        transition: all 1s;
+        position: relative;
+        width: 50.3vmax;
+    }
+
+    .shadow {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: all 1.2s;
+        /* border-radius: 15px; */
+    }
+
+    .video-button {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .video-button>img {
+        width: 80px;
+        opacity: 0;
+        transition: all 1.2s;
+        cursor: pointer;
+        background: transparent;
+    }
+
+    .video-button>video {
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+    .first-img:hover .shadow,
+    .first-img:hover .video-button>img {
+        background: #000000ab;
+        transition: all 1s;
+        opacity: 1;
+    }
+
+    .first-img>img {
+        width: 100%;
+        /* height: 100%; */
+        /* border-radius: 15px; */
+    }
+
+    @media screen and (max-width:700px) {
+        .main {
+            margin: 0 18.3% 0 25%;
+        }
+
+        .slider-box {
+            height: 30%;
+        }
+
+        .first-img {
+            width: 57vw;
+        }
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="right-button" id="right">> </div>
+        <div class="left-button" id="left">
+            < </div>
+                <div class="slider-box">
+                    <div class="first-img">
+                        <div class="shadow"></div>
+                        <div class="video-button">
+                            <img src="./Vector (8).png" alt="ojk" class="video">
+                            <video src="./let's go.mp4" muted plays-inline autoplay class="play"></video>
+                        </div>
+                        <img src="./manned guarding image 2.jpg" alt="">
+                    </div>
+                    <div class="first-img">
+                        <div class="shadow"></div>
+                        <div class="video-button">
+                            <img src="./Vector (8).png" alt="ojk" class="video">
+                            <video src="./let's go.mp4" muted plays-inline autoplay class="play"></video>
+                        </div>
+                        <img src="./manned guarding image 3.jpg" alt="">
+                    </div>
+                    <div class="first-img">
+                        <div class="shadow"></div>
+                        <div class="video-button">
+                            <img src="./Vector (8).png" alt="ojk" class="video">
+                            <video src="./let's go.mp4" muted plays-inline autoplay class="play"></video>
+                        </div>
+                        <img src="./manned guarding image 4.jpg" alt="">
+                    </div>
+                    <div class="first-img">
+                        <div class="shadow"></div>
+                        <div class="video-button">
+                            <img src="./Vector (8).png" alt="ojk" class="video">
+                            <video src="./let's go.mp4" muted plays-inline autoplay class="play"></video>
+                        </div>
+                        <img src="./manned guarding image 6.jpg" alt="">
+                    </div>
+                    <div class="first-img">
+                        <div class="shadow"></div>
+                        <div class="video-button">
+                            <img src="./Vector (8).png" alt="ojk" class="video">
+                            <video src="./let's go.mp4" muted plays-inline autoplay class="play"></video>
+                        </div>
+                        <img src="./Who-We-Are 5 (2).jpg" alt="">
+                    </div>
+                    <div class="first-img">
+                        <div class="shadow"></div>
+                        <div class="video-button">
+                            <img src="./Vector (8).png" alt="ojk" class="video">
+                            <video src="./let's go.mp4" muted plays-inline autoplay class="play"></video>
+                        </div>
+                        <img src="./Who-We-Are 4 (2).jpg" alt="">
+                    </div>
+                </div>
+        </div>
+
+
+        <script>
+            let slider = document.getElementsByClassName('slider-box')[0];
+            let right = document.getElementById('right');
+            let left = document.getElementById('left');
+            a = 0;
+
+            console.log(slider)
+
+            right.addEventListener('click', function () {
+                console.log(a)
+                if (a == -83.5) {
+                    console.log('hogayi')
+                    // a = 687;
+                    a = 16.7;
+                    slider.style.translate = a + '%';
+                    // slider.style.translate = a + 'px';
+
+                }
+
+                // a = a - 687
+                a = a - 16.7
+                slider.style.translate = a + '%';
+                // slider.style.translate = a + 'px';
+
+            })
+
+            left.addEventListener('click', function () {
+                console.log(a)
+                if (a == 0) {
+                    a = -100.2;
+                    slider.style.translate = a + '%';
+
+                }
+                if (a == 7.105427357601002e-15) {
+                    a = -100.2;
+                    slider.style.translate = a + '%';
+
+                }
+
+                a = a + 16.7
+                slider.style.translate = a + '%';
+
+            })
+
+
+            let video = document.getElementsByClassName('video')[0];
+            let play = document.getElementsByClassName('play')[0];
+
+            video.addEventListener('click', function () {
+                play.style.display = 'block';
+            })
+
+            let video1 = document.getElementsByClassName('video')[1];
+            let play1 = document.getElementsByClassName('play')[1];
+
+            video1.addEventListener('click', function () {
+                play1.style.display = 'block';
+            })
+
+            let video2 = document.getElementsByClassName('video')[2];
+            let play2 = document.getElementsByClassName('play')[2];
+
+            video2.addEventListener('click', function () {
+                play2.style.display = 'block';
+            })
+
+            let video3 = document.getElementsByClassName('video')[3];
+            let play3 = document.getElementsByClassName('play')[3];
+
+            video3.addEventListener('click', function () {
+                play3.style.display = 'block';
+            })
+
+            let video4 = document.getElementsByClassName('video')[4];
+            let play4 = document.getElementsByClassName('play')[4];
+
+            video4.addEventListener('click', function () {
+                play4.style.display = 'block';
+            })
+
+            let video5 = document.getElementsByClassName('video')[5];
+            let play5 = document.getElementsByClassName('play')[5];
+
+            video5.addEventListener('click', function () {
+                play5.style.display = 'block';
+            })
+        </script>
+</body>
+
+</html>
