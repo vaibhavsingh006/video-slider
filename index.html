@@ -24,31 +24,80 @@
 
     .right-button {
         position: fixed;
-        right: 0;
-        top: 50%;
+        user-select: none;
+        right: 0%;
+        top: 31%;
         background: gray;
-        border-radius: 50%;
-        color: black;
-        font-weight: 900;
-        z-index: 99;
-        padding: 20px 25px;
+        color: white;
+        padding: 20px 0.10%;
         cursor: pointer;
-        /* pointer-events: none; */
+        z-index: 99;
+        height: 37%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.7s;
+        text-align: center;
+        /* width: 29px; */
+    }
+
+    .right-button>pre {
+        width: 29px;
     }
 
     .left-button {
         position: fixed;
-        left: 0;
-        top: 50%;
+        user-select: none;
+        left: 0%;
+        top: 31%;
         background: gray;
-        border-radius: 50%;
-        color: black;
-        font-weight: 900;
-        padding: 20px 25px;
+        color: white;
+        padding: 20px 0.40%;
         cursor: pointer;
         z-index: 99;
-        /* pointer-events: all; */
+        height: 37%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transition: all 0.7s;
+    }
 
+    .left-button>pre>p {
+        opacity: 0;
+        transition: all 0.7s;
+    }
+
+    .right-button>pre>p {
+        opacity: 0;
+        transition: all 0.7s;
+    }
+
+    .left-button>p>b {
+        /* opacity: 1 !important; */
+    }
+
+    .left-button:hover p {
+        opacity: 1;
+        transition: all 0.7s;
+
+    }
+
+    .right-button>p {
+        opacity: 0;
+        transition: all 0.7s;
+    }
+
+    .right-button:hover p {
+        opacity: 1;
+        transition: all 0.7s;
+
+    }
+
+    .right-button:hover,
+    .left-button:hover {
+        background: #3bc4c4;
+        transition: all 0.7s;
     }
 
     .slider-box {
@@ -96,15 +145,20 @@
         background: transparent;
     }
 
+    .first-img:hover .video-button>img {
+        opacity: 1;
+    }
+
+    .video-button>iframe,
     .video-button>video {
         display: none;
+        background: #000;
         width: 100%;
         height: 100%;
         position: absolute;
     }
 
-    .first-img:hover .shadow,
-    .first-img:hover .video-button>img {
+    .first-img:hover .shadow {
         background: #000000ab;
         transition: all 1s;
         opacity: 1;
@@ -118,7 +172,11 @@
 
     @media screen and (max-width:700px) {
         .main {
-            margin: 0 18.3% 0 25%;
+            margin: 0 18.3% 0 18.3%;
+        }
+
+        .video-button>img {
+            opacity: 1;
         }
 
         .slider-box {
@@ -126,156 +184,234 @@
         }
 
         .first-img {
-            width: 57vw;
+            width: 64vw;
+        }
+
+        .right-button {
+            top: 41.5%;
+            height: 12%;
+        }
+
+        .left-button {
+            top: 41.5%;
+            height: 12%;
+            padding: 20px 0%;
+        }
+
+        .left-button>pre {
+            width: 29px;
+        }
+
+        .right-button>pre>p {
+            opacity: 1 !important;
+        }
+
+        .left-button>pre>p {
+            opacity: 1 !important;
         }
     }
 </style>
 
 <body>
     <div class="main">
-        <div class="right-button" id="right">> </div>
+
         <div class="left-button" id="left">
-            < </div>
-                <div class="slider-box">
-                    <div class="first-img">
-                        <div class="shadow"></div>
-                        <div class="video-button">
-                            <img src="./Vector (8).png" alt="ojk" class="video">
-                            <video src="./let's go.mp4" muted plays-inline autoplay class="play"></video>
-                        </div>
-                        <img src="./manned guarding image 2.jpg" alt="">
-                    </div>
-                    <div class="first-img">
-                        <div class="shadow"></div>
-                        <div class="video-button">
-                            <img src="./Vector (8).png" alt="ojk" class="video">
-                            <video src="./let's go.mp4" muted plays-inline autoplay class="play"></video>
-                        </div>
-                        <img src="./manned guarding image 3.jpg" alt="">
-                    </div>
-                    <div class="first-img">
-                        <div class="shadow"></div>
-                        <div class="video-button">
-                            <img src="./Vector (8).png" alt="ojk" class="video">
-                            <video src="./let's go.mp4" muted plays-inline autoplay class="play"></video>
-                        </div>
-                        <img src="./manned guarding image 4.jpg" alt="">
-                    </div>
-                    <div class="first-img">
-                        <div class="shadow"></div>
-                        <div class="video-button">
-                            <img src="./Vector (8).png" alt="ojk" class="video">
-                            <video src="./let's go.mp4" muted plays-inline autoplay class="play"></video>
-                        </div>
-                        <img src="./manned guarding image 6.jpg" alt="">
-                    </div>
-                    <div class="first-img">
-                        <div class="shadow"></div>
-                        <div class="video-button">
-                            <img src="./Vector (8).png" alt="ojk" class="video">
-                            <video src="./let's go.mp4" muted plays-inline autoplay class="play"></video>
-                        </div>
-                        <img src="./Who-We-Are 5 (2).jpg" alt="">
-                    </div>
-                    <div class="first-img">
-                        <div class="shadow"></div>
-                        <div class="video-button">
-                            <img src="./Vector (8).png" alt="ojk" class="video">
-                            <video src="./let's go.mp4" muted plays-inline autoplay class="play"></video>
-                        </div>
-                        <img src="./Who-We-Are 4 (2).jpg" alt="">
-                    </div>
+            <!-- <p>tap <br> <b>
+                    < </b> <br> Pre</p> -->
+            <pre> <p>Tap</p> <br>
+<b> <</b> <br>
+
+<p>Pre</p> </pre>
+        </div>
+        <div class="right-button" id="right">
+            <!-- <p>tap <br> <b> > </b> <br> Next</p> -->
+            <pre> <p>Tap</p> <br>
+<b> ></b> <br>
+                
+<p>Next</p> </pre>
+
+        </div>
+        <div class="slider-box">
+            <div class="first-img">
+                <div class="shadow"></div>
+                <div class="video-button">
+                    <img src="./Vector (8).png" alt="ojk" class="video">
+                    <!-- <video src="./let's go.mp4" plays-inline controls autoplay class="play"></video> -->
+                    <!-- <iframe class="play" src="https://www.youtube.com/embed/xC9euC4eja4" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe> -->
+                    <iframe class="play" src="https://www.youtube.com/embed/tgbNymZ7vqY" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; muted web-share"
+                        allowfullscreen=""></iframe>
                 </div>
+                <img src="./manned guarding image 2.jpg" alt="">
+            </div>
+            <div class="first-img">
+                <div class="shadow"></div>
+                <div class="video-button">
+                    <img src="./Vector (8).png" alt="ojk" class="video">
+                    <!-- <video src="./let's go.mp4" muted plays-inline autoplay controls class="play"></video> -->
+                    <iframe class="play" src="https://www.youtube.com/embed/tgbNymZ7vqY" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; muted web-share"
+                        allowfullscreen=""></iframe>
+                </div>
+                <img src="./manned guarding image 3.jpg" alt="">
+            </div>
+            <div class="first-img">
+                <div class="shadow"></div>
+                <div class="video-button">
+                    <img src="./Vector (8).png" alt="ojk" class="video">
+                    <!-- <video src="./let's go.mp4" muted plays-inline autoplay controls class="play"></video> -->
+                    <iframe class="play" src="https://www.youtube.com/embed/tgbNymZ7vqY" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; muted web-share"
+                        allowfullscreen=""></iframe>
+                </div>
+                <img src="./manned guarding image 4.jpg" alt="">
+            </div>
+            <div class="first-img">
+                <div class="shadow"></div>
+                <div class="video-button">
+                    <img src="./Vector (8).png" alt="ojk" class="video">
+                    <!-- <video src="./let's go.mp4" muted plays-inline autoplay controls class="play"></video> -->
+                    <iframe class="play" src="https://www.youtube.com/embed/tgbNymZ7vqY" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; muted web-share"
+                        allowfullscreen=""></iframe>
+                </div>
+                <img src="./manned guarding image 6.jpg" alt="">
+            </div>
+            <div class="first-img">
+                <div class="shadow"></div>
+                <div class="video-button">
+                    <img src="./Vector (8).png" alt="ojk" class="video">
+                    <!-- <video src="./let's go.mp4" muted plays-inline autoplay controls class="play"></video> -->
+                    <iframe class="play" src="https://www.youtube.com/embed/tgbNymZ7vqY" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; muted web-share"
+                        allowfullscreen=""></iframe>
+                </div>
+                <img src="./Who-We-Are 5 (2).jpg" alt="">
+            </div>
+            <div class="first-img">
+                <div class="shadow"></div>
+                <div class="video-button">
+                    <img src="./Vector (8).png" alt="ojk" class="video">
+                    <!-- <video src="./let's go.mp4" muted plays-inline autoplay controls class="play"></video> -->
+                    <iframe class="play" src="https://www.youtube.com/embed/tgbNymZ7vqY" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; muted web-share"
+                        allowfullscreen=""></iframe>
+                </div>
+                <img src="./Who-We-Are 4 (2).jpg" alt="">
+            </div>
         </div>
 
+    </div>
 
-        <script>
-            let slider = document.getElementsByClassName('slider-box')[0];
-            let right = document.getElementById('right');
-            let left = document.getElementById('left');
-            a = 0;
 
-            console.log(slider)
+    <script>
+        let slider = document.getElementsByClassName('slider-box')[0];
+        let right = document.getElementById('right');
+        let left = document.getElementById('left');
+        a = 0;
 
-            right.addEventListener('click', function () {
-                console.log(a)
-                if (a == -83.5) {
-                    console.log('hogayi')
-                    // a = 687;
-                    a = 16.7;
-                    slider.style.translate = a + '%';
-                    // slider.style.translate = a + 'px';
+        console.log(slider)
 
-                }
-
-                // a = a - 687
-                a = a - 16.7
+        right.addEventListener('click', function () {
+            play.style.display = 'none';
+            // play.style.audio = 'stop';
+            play1.style.display = 'none';
+            play2.style.display = 'none';
+            play3.style.display = 'none';
+            play4.style.display = 'none';
+            play5.style.display = 'none';
+            console.log(a)
+            if (a == -83.5) {
+                console.log('hogayi')
+                // a = 687;
+                a = 16.7;
                 slider.style.translate = a + '%';
                 // slider.style.translate = a + 'px';
+            }
 
-            })
+            // a = a - 687
+            a = a - 16.7
+            slider.style.translate = a + '%';
+            // slider.style.translate = a + 'px';
+        })
 
-            left.addEventListener('click', function () {
-                console.log(a)
-                if (a == 0) {
-                    a = -100.2;
-                    slider.style.translate = a + '%';
-
-                }
-                if (a == 7.105427357601002e-15) {
-                    a = -100.2;
-                    slider.style.translate = a + '%';
-
-                }
-
-                a = a + 16.7
+        left.addEventListener('click', function () {
+            play.style.display = 'none';
+            play1.style.display = 'none';
+            play2.style.display = 'none';
+            play3.style.display = 'none';
+            play4.style.display = 'none';
+            play5.style.display = 'none';
+            // play.style.audio = 'stop';
+            console.log(a)
+            if (a == 0) {
+                a = -100.2;
                 slider.style.translate = a + '%';
 
-            })
+            }
+            if (a == 7.105427357601002e-15) {
+                a = -100.2;
+                slider.style.translate = a + '%';
+
+            }
+
+            a = a + 16.7
+            slider.style.translate = a + '%';
+
+        })
 
 
-            let video = document.getElementsByClassName('video')[0];
-            let play = document.getElementsByClassName('play')[0];
+        let video = document.getElementsByClassName('video')[0];
+        let play = document.getElementsByClassName('play')[0];
 
-            video.addEventListener('click', function () {
-                play.style.display = 'block';
-            })
+        video.addEventListener('click', function () {
+            play.style.display = 'block';
+        })
 
-            let video1 = document.getElementsByClassName('video')[1];
-            let play1 = document.getElementsByClassName('play')[1];
+        let video1 = document.getElementsByClassName('video')[1];
+        let play1 = document.getElementsByClassName('play')[1];
 
-            video1.addEventListener('click', function () {
-                play1.style.display = 'block';
-            })
+        video1.addEventListener('click', function () {
+            play1.style.display = 'block';
+        })
 
-            let video2 = document.getElementsByClassName('video')[2];
-            let play2 = document.getElementsByClassName('play')[2];
+        let video2 = document.getElementsByClassName('video')[2];
+        let play2 = document.getElementsByClassName('play')[2];
 
-            video2.addEventListener('click', function () {
-                play2.style.display = 'block';
-            })
+        video2.addEventListener('click', function () {
+            play2.style.display = 'block';
+        })
 
-            let video3 = document.getElementsByClassName('video')[3];
-            let play3 = document.getElementsByClassName('play')[3];
+        let video3 = document.getElementsByClassName('video')[3];
+        let play3 = document.getElementsByClassName('play')[3];
 
-            video3.addEventListener('click', function () {
-                play3.style.display = 'block';
-            })
+        video3.addEventListener('click', function () {
+            play3.style.display = 'block';
+        })
 
-            let video4 = document.getElementsByClassName('video')[4];
-            let play4 = document.getElementsByClassName('play')[4];
+        let video4 = document.getElementsByClassName('video')[4];
+        let play4 = document.getElementsByClassName('play')[4];
 
-            video4.addEventListener('click', function () {
-                play4.style.display = 'block';
-            })
+        video4.addEventListener('click', function () {
+            play4.style.display = 'block';
+        })
 
-            let video5 = document.getElementsByClassName('video')[5];
-            let play5 = document.getElementsByClassName('play')[5];
+        let video5 = document.getElementsByClassName('video')[5];
+        let play5 = document.getElementsByClassName('play')[5];
 
-            video5.addEventListener('click', function () {
-                play5.style.display = 'block';
-            })
-        </script>
+        video5.addEventListener('click', function () {
+            play5.style.display = 'block';
+        })
+    </script>
 </body>
 
 </html>
